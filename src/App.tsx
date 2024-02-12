@@ -1,9 +1,9 @@
-import useState   from 'react';
+import Avatar from "./components/Avatar";
 
 const App = () => {
   return (
     <>
-    <main>hello</main>
+      <Avatar />
     </>
   )
 };
