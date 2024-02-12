@@ -13,4 +13,24 @@ body {
     background-image    : url('../../images/profilePicture.JPG');
     background-size     : cover;
     background-position : center;
+    position            : relative;
+}
+
+.avatar::after,
+.avatar::before {
+    position        : absolute;
+    top             : -.25rem;
+    left            : 50%;
+    transform       : translateX(-50%) translateY(-100%);
+}
+
+.avatar::before {
+    content         : attr(data-tooltip);
+    color           : white;
+    padding         : .5rem;
+    border-radius   : .3rem;
+    text-align      : center;
+    width           : max-content;
+    max-width       : 100%;
+    background-color: #333;
 }
