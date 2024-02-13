@@ -1,3 +1,7 @@
+* {
+    --scale: 0;
+}
+
 body {
     display         : flex;
     justify-content : center;
@@ -21,7 +25,9 @@ body {
     position        : absolute;
     top             : -.25rem;
     left            : 50%;
-    transform       : translateX(-50%) translateY(-100%);
+    transform       : translateX(-50%) translateY(-100%) scale(var(--scale));
+    transition      : 150ms transform;
+    transform-origin: bottom center;
 }
 
 .avatar::before {
@@ -33,4 +39,8 @@ body {
     width           : max-content;
     max-width       : 100%;
     background-color: #333;
+}
+
+.avatar:hover::before {
+    --scale: 1;
 }
